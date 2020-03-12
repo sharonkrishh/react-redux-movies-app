@@ -5,7 +5,6 @@ import MovieCard from './MovieCard';
 function MovieContainer(props) {
     return (
         <div>
-            <h3>Here is List</h3>
             <div className="container">
                 <div className="row">
                 {
@@ -20,7 +19,8 @@ function MovieContainer(props) {
     )
 }
 const mapStateToProps = state => ({
-    movies: state.moviesList.movies
+    movies: state.moviesList.movies,
+    loading: state.loading
 })
 export default connect(mapStateToProps)(MovieContainer);
 

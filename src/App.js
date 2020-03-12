@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Provider } from 'react-redux'
-;import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import { Provider } from 'react-redux';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import SearchForm from './components/SearchForm';
 import store from './store';
 import './App.css';

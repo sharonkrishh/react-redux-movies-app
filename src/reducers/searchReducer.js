@@ -1,4 +1,4 @@
-import { SEARCH_MOVIE,FETCH_MOVIES } from '../constants/index';
+import { SEARCH_MOVIE, FETCH_MOVIES } from '../constants/index';
 
 const initialState = {
     text : '',
