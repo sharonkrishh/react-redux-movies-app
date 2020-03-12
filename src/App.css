@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-size: 30px;
 }
 
 .App-logo {
@@ -35,4 +36,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.movieCard{
+  position: relative;
+  margin:10px 0;
+}
+.movieCard img{
+  height: 300px;
+}
+.movieCard .card-body{
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.82);
+  width: 100%;
+  bottom: 0;
+  text-align: left;
+  padding: 15px;
+}
+.movieCard .card-body h5{
+  font-size: 14px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+.movieCard .card-body p {
+  font-size: 12px;
+  color: #3ec657;
+}
+.movieCard .card-body p:last-of-type{
+  color: #ffaf02;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 0;
 }
