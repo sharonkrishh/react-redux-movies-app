@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMovie, setLoading } from '../actions/searchActions';
+import Spinner from './layout/Spinner';
 
 class Movie extends Component {
 
@@ -10,10 +11,10 @@ class Movie extends Component {
         this.props.setLoading();
     }
     render() {
-        const { movie } = this.props;
+        const { movie, loading } = this.props;
         console.log(movie);
-        return (
-            <div className="container">
+        let movieDetail = (
+            <div className="container movie-detail-wrapper">
                 <div className="row movie-detail">
                     <div className="col">
                         <div className="card">
@@ -37,6 +38,10 @@ class Movie extends Component {
                     </div>
                 </div>
             </div>
+        );
+        let content = loading ? <Spinner/> : movieDetail;
+        return (
+            <div>{content}</div>
         );
     }
 }

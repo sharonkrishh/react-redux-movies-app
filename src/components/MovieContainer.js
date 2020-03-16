@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 
 function MovieContainer(props) {
     return (
-        <div>
+        <div className="movie-container">
             <div className="container">
                 <div className="row">
                 {
