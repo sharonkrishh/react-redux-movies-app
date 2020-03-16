@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import SearchForm from './components/SearchForm';
 import store from './store';
 import './App.css';
-import MovieContainer from './components/MovieContainer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import Movie from './components/Movie';
 
 class App extends Component {
   constructor(props) {
@@ -18,12 +19,16 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
+      <Router>
          <div className="App">
           <Navbar/>
-          <SearchForm/>
-          <MovieContainer/>
+          <Switch>
+            <Route exact path='/' component={LandingPage}/>
+            <Route exact path='/movie/:id' component={Movie}/>
+          </Switch>
           <Footer/>
         </div>
+        </Router>
       </Provider>
      
     )

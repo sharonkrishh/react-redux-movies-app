@@ -20,7 +20,7 @@ function MovieContainer(props) {
 }
 const mapStateToProps = state => ({
     movies: state.moviesList.movies,
-    loading: state.loading
+    loading: state.moviesList.loading
 })
 export default connect(mapStateToProps)(MovieContainer);
 
