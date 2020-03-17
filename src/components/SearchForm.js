@@ -16,11 +16,10 @@ export class SearchForm extends Component {
 
     render() {
         return (
-            <div className="jumbotron">
+            <div className="searchPanel">
                 <div className="container">
-                <h1 className="display-4"><i className="fas fa-search"></i> Search your favourite movies</h1>
-                <p className="lead">Here we have thousand of movies</p>
-                <hr className="my-4"/>
+                <h3><i className="fas fa-search"></i> Search your favourite movies</h3>
+                <p>Here we have thousand of movies</p>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <input type="text" className="form-control" placeholder="Search movies Tv series..."

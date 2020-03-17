@@ -1,5 +1,6 @@
 body{
-  font-size: 14px;;
+  font-size: 14px;
+  color: #333;
 }
 .App {
   text-align: center;
@@ -8,7 +9,19 @@ body{
   flex-flow: column;
   min-height: 100vh;
 }
-
+.header-panel{
+  background-color: #fff;
+  height: 75px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.12);
+  padding: 0 30px;
+}
+.header-panel .navbar{
+  padding: 0;
+  height: 100%;
+}
+.header-panel .navbar .navbar-brand{
+  color: #333;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -43,7 +56,9 @@ body{
     transform: rotate(360deg);
   }
 }
-
+.movie-container, .movie-detail-panel{
+  padding: 30px 0;
+}
 .movieCard{
   position: relative;
   margin:10px 0;
@@ -78,8 +93,7 @@ body{
 .footerPanel{
   height: 90px;
   margin-top: auto;
-  background-color: #404d5a;
-  color: #e4e4e4;
+  background-color: #eaeaea;
   font-size: 14px;
   padding: 30px 0px;
   display: flex;
@@ -101,4 +115,35 @@ body{
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+.NotFound-item{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.searchPanel{
+  background-image: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+  padding: 40px 0px;
+}
+.searchPanel form{
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.searchPanel form .form-group{
+  flex: 1;
+}
+.searchPanel form input, .searchPanel form button{
+  height: 60px;
+  border-radius:0px;
+  border:none;
+  outline: none;
+}
+.searchPanel form input:focus, .searchPanel form button:focus{
+  box-shadow: none;
+}
+.searchPanel form button{
+  background-color: #3F51B5;
 }

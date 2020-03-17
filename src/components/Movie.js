@@ -41,7 +41,7 @@ class Movie extends Component {
         );
         let content = loading ? <Spinner/> : movieDetail;
         return (
-            <div>{content}</div>
+            <div className="movie-detail-panel">{content}</div>
         );
     }
 }

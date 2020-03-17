@@ -10,10 +10,10 @@ class LandingPage extends Component {
         const { loading } = this.props;
         console.log(loading);
         return (
-            <div>
+            <React.Fragment>
                 <SearchForm/>
                 {loading ? <Spinner/> : <MovieContainer/>}
-            </div>
+            </React.Fragment>
         );
     }
 }
